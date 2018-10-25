@@ -3,7 +3,8 @@ var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
 var gutil       = require('gulp-util');
 
-// Compile sass into CSS and put into docs/css folder
+// Compile Sass into CSS and put into docs/css folder
+// gutil logs errors on console instead of quitting gulp
 gulp.task('sass', function() {
     return gulp.src(['src/scss/*.scss'])
         .pipe(sass())
